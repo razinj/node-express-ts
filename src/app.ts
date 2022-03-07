@@ -1,6 +1,5 @@
 import Express from 'express'
 import Logger from 'morgan'
-
 import Router from './router'
 
 const App: Express.Application = Express()
