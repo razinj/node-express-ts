@@ -1,9 +1,11 @@
+type ResponseError = Error | unknown
+
 export class CustomResponse<T> {
   data: T
-  error: Error | string
-  message: string
+  error: ResponseError
+  message?: string
 
-  constructor(data: T, error: Error | string, message: string) {
+  constructor(data: T, error: ResponseError, message?: string) {
     this.data = data
     this.error = error
     this.message = message
