@@ -1,8 +1,8 @@
 import { Router } from 'express'
-import routeNotFoundController from '../controller/route-not-found.controller'
+import { routeNotFoundHandler } from '../controller/route-not-found.controller'
 
-const routes: Router = Router()
+const router: Router = Router()
 
-routes.all('*', routeNotFoundController.routeNotFoundHandler)
+router.all('*', routeNotFoundHandler)
 
-export default { routes }
+export { router }

@@ -1,9 +1,9 @@
 import { Router } from 'express'
-import statusRoutes from './route/status.route'
-import pageNotFoundRoutes from './route/route-not-found.route'
+import { router as statusRouter } from './route/status.route'
+import { router as pageNotFoundRouter } from './route/route-not-found.route'
 
 const router: Router = Router()
 
-router.use(statusRoutes.routes, pageNotFoundRoutes.routes)
+router.use(statusRouter, pageNotFoundRouter)
 
-export default router
+export { router }

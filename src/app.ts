@@ -1,11 +1,11 @@
 import Express from 'express'
 import Logger from 'morgan'
-import Router from './router'
+import { router } from './router'
 
 const App: Express.Application = Express()
 
 App.use(Logger('dev'))
 App.use(Express.json())
-App.use(Router)
+App.use(router)
 
 export default App
