@@ -1,8 +1,8 @@
 import { Router } from 'express'
-import controller from '../controller/status.controller'
+import { appStatusHandler } from '../controller/status.controller'
 
-const routes: Router = Router()
+const router: Router = Router()
 
-routes.get('/status', controller.appStatusHandler)
+router.get('/status', appStatusHandler)
 
-export default { routes }
+export { router }
