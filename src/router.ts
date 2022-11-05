@@ -1,4 +1,6 @@
+// Express
 import { Router } from 'express'
+// Routes
 import { router as statusRouter } from './route/status.route'
 import { router as pageNotFoundRouter } from './route/route-not-found.route'
 
